@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Weather</h1>
+    </header>
+
+    <div id="location-form" class="hidden">
+      <p>Enter a city to get started</p>
+      <form id="search-form">
+        <input id="city-input" type="text" placeholder="e.g. New York" autocomplete="off" />
+        <button type="submit">Search</button>
+      </form>
+      <p id="form-error" class="error hidden"></p>
+    </div>
+
+    <div id="loading" class="hidden">
+      <span class="spinner"></span>
+    </div>
+
+    <div id="forecast" class="hidden">
+      <div id="location-label">
+        <span id="location-name"></span>
+        <button id="change-location">change</button>
+      </div>
+      <div id="cards"></div>
+    </div>
+
+    <p id="global-error" class="error hidden"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
